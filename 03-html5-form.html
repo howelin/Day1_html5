@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>html5</title>
+	<meta name="keywords" content="web前端,html5,css">
+    <meta name="description" content="网站的描述">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-1.12.0.js"></script>
+</head>
+    
+<body>
+	
+	<form action="index.html">
+		
+		<!--
+        	autofocus 自动获取焦点，一开始加载进来就有光标
+        	placeholder  输入框文本内容提示
+        	required     必填项
+        	pattern      正则匹配，最好跟title一起搭配使用，title告知输入的格式  
+        -->
+        
+        
+		用户名： <input type="text" autofocus="autofocus" placeholder="这是输入用户名" required="required" pattern="[1-9]{3}" title="这里请输入三位数字"> <br><br>
+		
+		密码：   <input type="password"><br><br>
+		
+		<!--email: <input type="email" /><br><br>
+		
+		url: <input type="url" /><br><br>-->
+		
+		日期： <input type="date"><br><br>
+		
+		时间： <input type="time" /><br><br>
+		
+		数字： <input type="number"><br><br>
+		
+		进度条： <input type="range"><br><br>
+		
+		下拉菜单： <input type="text" list="datalist">
+		<datalist id="datalist">
+			<option value="1"></option>
+			<option value="2"></option>
+			<option value="3"></option>
+		</datalist><br><br>
+		
+		<select>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+		</select><br><br>
+		
+		<!-- 
+			
+		datalist和select的区别 
+		select：5个值里面选择1个；
+		datalist：你可以在文本框里填值，也可以在下面5个值里选1个。
+		
+		-->
+		
+		颜色： <input type="color" /><br><br>
+		
+		<button>提交</button>
+	</form>
+	
+	<script>
+	// js 通过循环获取表单所有元素的值
+//	var input = document.getElementsByTagName('input');
+//	
+//	// 循环逐一获取输入框的值
+//	for(var i=0; i<input.length; i++) {
+//		var val = input[i].value;
+//		console.log(val);
+//	}
+	
+	
+	// jquery获取input的值
+//	$.each($('input'), function(idx, ele) {
+//		
+//		
+//		// 获取元素的值
+//		console.log($(ele).val());
+//		
+//	});
+	
+	// 点击提交按钮，获取表单的数据
+//	$('button').on('click', function () {
+//		// $.map循环获取值
+//		$.map($('input'), function (ele, idx) {
+//			console.log($(ele).val());
+//		})
+//		return false;
+//	})
+
+//	$('input[type=color]').on('change', function () {
+//		var colorVal = $(this).val();
+//		console.log(colorVal);
+//	})
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--<script>
+		
+		var btn = document.getElementById('btn');
+		var th = document.getElementById('th');
+		
+		
+		th.onclick = function () {
+			var dateVal = document.getElementById('date').value;
+			
+//			var rep = dateVal.replace(/-/g, '/');
+
+			var arrVal = dateVal.split('-');
+			
+//			var strVal = arrVal[0] + '/' + arrVal[1] + '/' + arrVal[2];
+			
+			console.log(arrVal.join('/'));
+			return false;
+		}
+		
+		btn.onclick = function () {
+		
+			var inputObj = document.getElementsByTagName('input');
+			
+			var arr = [];
+			for(var i=0; i<inputObj.length; i++){
+				arr.push(inputObj[i].value);
+			}
+			
+			console.log(arr);
+			
+			return false;
+		
+		}
+	</script>-->
+	
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>localstorage 本地存储</title>
+		<meta name="keywords" content="web前端,html5,css">
+        <meta name="description" content="网站的描述">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <script type="text/javascript">
+       		
+       		// cookie的存储
+       		document.cookie = 'name="张三"';
+       		
+       		// localStorage的存储
+       		// 存储的三种方法
+       		localStorage.name = '李四';   // 普通的对象赋值 
+       		
+       		localStorage['age'] = 100;   // 数组赋值
+       		
+       		localStorage.setItem('sex', '男');   // 通过setItem的方法，第一个参数是字段，第二个是值
+       			
+       		alert(localStorage.getItem('name'));  // 获取字段的值用getItem方法
+       		
+//     		localStorage.removeItem('name');      // 删除某一项用 removeItem
+       		
+//     		localStorage.clear();                // 删除全部
+
+			alert(localStorage.length);          // 获取全部字段的长度
+			
+			
+			var arr = [1,2,3];
+       		var json = JSON.stringify(arr);     // 数组存储，先转化为json字符串
+       		
+       		localStorage.arr = json;
+       		
+       		var obj = {
+       			'name': '赵六',
+       			'age': '20'
+       		}
+       		
+       		var jsonObj = JSON.stringify(obj);  // 对象存储，先转化为json字符串
+       		
+       		localStorage.obj = jsonObj;
+       		
+       </script>
+    </head
+    
+    <body>
+    </body>
+    
+</html>

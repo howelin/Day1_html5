@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>视频播放页面</title>
+		<meta name="keywords" content="web前端,html5,css">
+        <meta name="description" content="网站的描述">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+		<style>			
+			.video{
+				width:400px;
+				height:400px;
+				margin:0 auto;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.12.0.js"></script>
+		<script>			
+			$(function(){
+				
+				// 获取对象，根据提供的方法进行调用，对视频重新设置
+				var video=$("#video1")[0];
+
+				// 播放
+				$("#play").click(function(){
+					video.play();
+				})
+				
+				// 暂停
+				$("#pause").click(function(){
+					video.pause();
+				})
+
+				// 快进
+				$("#go10").click(function(){
+					console.log(video.currentTime);
+				})
+				
+				// 音量+
+				$("#volume1").click(function(){
+					video.volume += 0.1;
+				})
+				
+				// 音量-
+				$("#volume0").click(function(){
+					video.volume -= 0.1;
+				})
+				
+				// 播放速度+
+				$("#rate1").click(function(){
+					video.playbackRate += 0.1;   
+				})
+				
+				// 播放速度-
+				$("#rate0").click(function(){
+					video.playbackRate -= 0.1;
+				})
+				
+				// 设置宽度
+				$("#width1").click(function(){
+					video.width = 600;
+				})
+				
+				// 设置宽度
+				$("#width2").click(function(){
+					video.width = 400;
+				})	
+				
+			})
+		</script>
+    </head>
+    
+    <body>
+    	
+	<video id="video1" controls="true">
+	   <source src="videos/mov_bbb.mp4" type="video/mp4">
+	   您的浏览器不兼容，请升级浏览器
+	</video>
+
+	<br>
+	<br>
+    <hr>
+    <button id="play">播放</button>
+    <button id="pause">暂停</button>
+    <button id="go10">当前时间</button>
+    <!--<button id="back10">快退10秒</button>-->
+    <button id="rate1">播放速度+</button>
+    <button id="rate0">播放速度-</button>
+    <button id="volume1">声音+</button>
+    <button id="volume0">声音-</button>
+    <button id="width1">设置宽度600</button>
+    <button id="width2">设置宽度400</button>
+
+    </body>
+
+</html>
+
+

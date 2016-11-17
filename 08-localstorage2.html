@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>localstorage 本地存储</title>
+		<meta name="keywords" content="web前端,html5,css">
+        <meta name="description" content="网站的描述">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript">
+       	
+       		// localStorage.name='张三';
+
+       		// localStorage['age']='100';
+
+       		// localStorage.setItem('sex','男');
+
+       		// alert(localStorage.name);
+
+       		// alert(localStorage['age']);
+
+            //设置localstorage
+            function setItem (key,value) {
+               // body...  
+                localStorage.setItem(key,JSON.stringify(value));
+            }
+            
+            //获取localstorage里面的值
+            function getItem (key) {
+               return JSON.parse(localStorage.getItem(key));   //获取要返回值
+            }
+			
+            function clearItem(key){
+                localStorage.removeItem(key);   //清除单独的key
+            }
+
+            setItem('name','王五');
+            setItem('age','100');
+            setItem('sex','男');
+
+            console.log(getItem('name'));
+
+            clearItem('sex');
+
+            var arr=['zhangsan','李四'];
+
+            setItem('arr',arr);
+
+       </script>  
+    </head>
+    
+    <body>
+    </body>
+    
+</html>

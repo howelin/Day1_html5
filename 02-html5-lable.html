@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>html5</title>
+	<meta name="keywords" content="web前端,html5,css">
+	<meta name="description" content="网站的描述">
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		ul,li{
+			list-style: none;
+		}
+		header{
+			width:100%;
+			background:red;
+		}
+		nav{
+			overflow: hidden;
+			margin-top: 20px;
+			border-bottom: 2px solid #ddd;
+			padding-bottom: 20px;
+		}
+		nav li{
+			float:left;
+			margin-right: 50px;
+		}
+		.content{
+			width:1024px;
+			height:500px;
+			margin:0 auto;
+		}
+		article{
+			width:700px;
+			float:left;
+			min-height:600px;
+		}
+		aside{
+			width:310px;
+			float:right;
+			min-height:600px;
+			background:blue;
+		}
+		article p{
+			line-height:1.5;         /*150%  180%*/
+		}
+		section{
+			background:blue;
+		}
+		article,aside,dialog,footer,header,section,footer,nav,figure,menu{
+			display:block;
+		}
+		footer{
+		
+			width:100%;
+			height:200px;
+			background:blue;
+		}
+	</style>    
+</head>
+
+<body>
+	
+	
+	<!--
+	/*
+	 * html5 语义化标签
+	 * header  头部
+	 * hgroup  标题区块
+	 * nav     导航
+	 * article 内容区
+	 * section 段落
+	 * aside   侧边栏
+	 * footer  底部
+	 */
+	-->
+	
+	<header>  <!--头部  div.header  定义头部-->
+		
+		<hgroup>
+			<h1>test</h1>
+			<h2>test</h2>
+			<h3>test</h3>
+		</hgroup>
+		
+		<nav>  <!--用于导航-->
+			<li>首页</li>
+			<li>京东超市</li>
+			<li>全球购</li>
+		</nav>
+	
+	</header>
+
+	<div class="content">  <!--内容区域-->
+		
+		<article>  <!--定义网站的内容区域-->
+
+			<h1 class="title">坚守信仰·坚定理想·坚持自信——习近平总书记在庆祝中国共产党成立95周年大会上的重要讲话引起强烈反响</h1>
+			<section>
+				<p>　“一切向前走，都不能忘记走过的路；走得再远、走到再光辉的未来，也不能忘记走过的过去，不能忘记为什么出发。”</p>
+　　			<p>７月１日上午，习近平总书记在庆祝中国共产党成立９５周年大会上的重要讲话被广大党员干部群众称为“一堂十分生动的党课”。大家纷纷表示，历史反复证明，只有坚守马克思主义信仰，坚定共产主义远大理想，坚持中国特色社会主义道路自信、理论自信、制度自信、文化自信，党才能带领人民群众在实现中华民族伟大复兴的道路上不断取得新的胜利。</p>
+			</section>
+
+		</article class="second">
+
+		<aside>
+			<!--右侧边栏-->
+		</aside>
+		
+	</div>
+
+	<footer>
+		<!--底部-->
+	</footer>
+	
+</body>
+</html>
